@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NoteApp</string>
+    <string name="notes_count_placeholder">You have %1$d notes</string>
+
+</resources>
