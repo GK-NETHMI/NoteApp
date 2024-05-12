@@ -61,12 +61,13 @@ class NotesAdapter(private var notes: List<Note>, private val context: Context) 
 
             // Update pinned/unpinned icon
             if (note.isPinned) {
-                holder.pinButton.setImageResource(R.drawable.baseline_push_pin_24 )
+                holder.pinButton.setImageResource(R.drawable.baseline_push_pin_24)
                 Toast.makeText(context, "Note pinned", Toast.LENGTH_SHORT).show()
                 // Move the pinned note to the top
                 val pinnedNoteIndex = notes.indexOf(note)
                 if (pinnedNoteIndex != -1) {
-                    notes = listOf(note) + notes.filterIndexed { index, _ -> index != pinnedNoteIndex }
+                    notes =
+                        listOf(note) + notes.filterIndexed { index, _ -> index != pinnedNoteIndex }
                     notifyDataSetChanged()
                 }
             } else {
